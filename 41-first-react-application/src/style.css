@@ -1,0 +1,21 @@
+body {
+    background-color: azure;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: crimson;
+    text-shadow: 0 0 20px orchid;
+}
+
+p {
+    text-align: left;
+}
+.cute-paragraph{
+    color: orchid;
+}
+
+div {
+    margin: 10px;
+    border-bottom: 2px solid lightcyan;}
