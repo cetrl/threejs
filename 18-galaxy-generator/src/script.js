@@ -70,23 +70,23 @@ const generateGalaxy = () => {
       (Math.random() < 0.5 ? 1 : -1) *
       parameters.randomness *
       radius;
-    
-    const colorInside = new THREE.Color(parameters.insideColor)
-    const colorOutside = new THREE.Color(parameters.outsideColor)
-    const mixedColor = colorInside.clone()
-    mixedColor.lerp(colorOutside, radius / parameters.radius)
+
+    const colorInside = new THREE.Color(parameters.insideColor);
+    const colorOutside = new THREE.Color(parameters.outsideColor);
+    const mixedColor = colorInside.clone();
+    mixedColor.lerp(colorOutside, radius / parameters.radius);
 
     positions[i3] = Math.cos(branchAngle + spinAngle) * radius + randomX;
     positions[i3 + 1] = randomY;
     positions[i3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
 
-    colors[i3] = mixedColor.r
-    colors[i3 + 1] = mixedColor.g
-    colors[i3 + 2] = mixedColor.b
+    colors[i3] = mixedColor.r;
+    colors[i3 + 1] = mixedColor.g;
+    colors[i3 + 2] = mixedColor.b;
   }
 
   geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
+  geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
   /**
    * Material
@@ -96,7 +96,7 @@ const generateGalaxy = () => {
     sizeAttenuation: true,
     depthWrite: false,
     blending: THREE.AdditiveBlending,
-    vertexColors: true
+    vertexColors: true,
   });
 
   /**
